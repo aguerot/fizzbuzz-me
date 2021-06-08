@@ -1,0 +1,30 @@
+<div class="mainContainer flexCenterColumn">
+  <div class="contentContainer flexCenterColumn">
+
+    <form class="fizzBuzzForm flexCenterColumn" (ngSubmit)="onSubmit()">
+      <h1 class="title">FizzBuzz - test</h1>
+      <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
+      <input type="text" [(ngModel)]="fizzBuzzInput" name="fizzBuzzInput" placeholder="Enter number" pInputText />
+      <button class="submitButton" [disabled]="!fizzBuzzInput" pButton type="submit" label="FizzBuzz"></button>
+    </form>
+
+
+
+    <div *ngIf="fizzBuzzValue" class="ResultContainer flexCenterColumn">
+      <h2>{{fizzBuzzValue.element}} - {{fizzBuzzValue.isContiguous? 'Is contiguous' : 'Is not contiguous'}}</h2>
+    </div>
+  </div>
+
+  <div class="downArrowContainer flexCenterColumn">
+    <em class="pi pi-angle-down" style="font-size: 2rem"></em>
+    <p>Scroll bellow to see the contigeous from 0 to 100</p>
+  </div>
+
+</div>
+
+
+
+<ul>
+  <li *ngFor="let item of fizzBuzzArray">{{item.element}} - {{item.isContiguous? 'Is contiguous' : 'Is not contiguous'}}
+  </li>
+</ul>

@@ -1,0 +1,34 @@
+.flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.contentContainer {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fizzBuzzForm {
+  .title {
+    font-family: "Handlee", cursive;
+  }
+
+  .submitButton {
+    margin-top: 15px;
+    background-color: darkseagreen;
+  }
+}
+
+.downArrowContainer {
+  position: absolute;
+  bottom: 1px;
+}
